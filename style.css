@@ -311,14 +311,6 @@ body{
     color: #fff;
 }
 
-form label {
-    display: inline-block;
-    width: 100px;
-}
-
-form div {
-    margin-bottom: 10px;
-}
 
 .contact-form input, .contact-form textarea{
     width: 100%;
