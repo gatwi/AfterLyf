@@ -13,6 +13,7 @@
                 <li class="link"><a href="#">services</a></li>
                 <li class="link"><a href="#">contact</a></li>
             </ul>
+            <script src="script.js"></script>
         </nav>
         <!-- home section -->
         <section class="home-section active">
@@ -104,7 +105,18 @@
         <section class="contact section active">
             <h1 class="heading">talk to us</h1>
            <div class="contact-container">
-            <form class="contact-form">
+            <form onsubmit="return setAction(this)">
+                <div>
+                    <label>Name:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div>
+                    <input id="submit" type="submit">
+                </div>
                 <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
                 <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
                 <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
