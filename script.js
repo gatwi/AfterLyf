@@ -19,3 +19,42 @@ links.forEach((link, i) => {
     })
 })
 
+let links = document.getElementsByClass("links");
+
+links.addEventListener("mouseenter", function(event) {
+    event.target.style.color = "purple";
+    setTimeout(function() {
+        event.target.style.color = "";
+    }, 500);
+}, false);
+
+links.addEventListener("mouseover", function(event) {
+    event.target.style.colot = "orange";
+    this.setTimeout(function() {
+        event.target.style.color = "";
+    }, 500);
+}, false);
+
+
+
+
+
+
+
+// button event handler
+
+let btn = document.querySelector('button');
+btn.addEventListener('click', function(event) {
+    alert(event.type);
+});
+
+btn.addEventListener('click', function(event) {
+    alert('clicked!');
+})
+
+// adding an eventListener() to the submit form
+
+const form = document.getElementById('contact');
+form.addEventListener('submit', (event) => {
+    //handle data from the form
+})
