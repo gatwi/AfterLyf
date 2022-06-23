@@ -71,16 +71,11 @@ body{
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
-    opacity: 1;
+    opacity: 2;
     pointer-events: auto;
     transition: all 0.3s ease;
 }
 
-.scroll-up-btn.show{
-    bottom: 30px;
-    opacity: 1;
-    pointer-events: auto;
-}
 /* home section styling */
 .home-section {
     width: 100%;
