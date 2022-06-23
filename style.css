@@ -17,7 +17,7 @@ body{
 
 .navbar{
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     display: flex;
@@ -44,8 +44,9 @@ body{
     font-size: 20px;
 }
 
-.link a:hover, .link.active {
+.link a:hover {
     opacity: 3;
+    color: #ff4f4f;
 }
 
 /* home section styling */
