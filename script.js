@@ -1,6 +1,4 @@
-
-
-const getDiseases = () => {
+const getDiseases = (symptom) => {
     const options = {
         method: 'GET',
         headers: {
@@ -9,19 +7,38 @@ const getDiseases = () => {
         }
     };
     
-    fetch('https://disease-detection.p.rapidapi.com/symptom_list/', options)
+    fetch(`https://disease-detection.p.rapidapi.com/get_disease/${symptoms}`, options)
         .then(response => response.json())
         .then(response => getResults(response))
         .catch(err => console.error(err));
 }
 
-const getResults = () => {
-    console.log()
-    const inputValue = document.querySelector("#query").value
+const getResults = (results) => {
+    const resultSection = document.querySelector('#results') 
+
+    console.log(results)
+    const ul = document.createElement('ul')
+    results.forEach(res=>{
+        const result = `
+        <div id="resultItem">
+        <h1>${res.Disease}</h1>
+        <p>Symptom 1: ${re.Symptom_1}</p>
+        <p>Symptom 2: ${res.Symptom_2}</p>
+        </div>
+        `
+        const li = document.createElement(li)
+        li.innerHTML = result
+        ul.appendChild(li)
+    })
+    resultSection.appendChild(ul)
+
+    
     const outputValue = document.querySelector("#answer")
     outputValue.addEventListener("submit", function(e) {
         e.preventDefault()
         console.log("hay fever")
+        const inputValue = document.querySelector("#query").value
+        getDiseases(inputValue)
     })
 }
 
@@ -29,8 +46,8 @@ const getResults = () => {
 
 const init = () => {
     document.addEventListener("DOMContentLoaded", function() {
-        // getDiseases()
-        getResults()
+        getDiseases()
+        // getResults()
     })
 }
 
