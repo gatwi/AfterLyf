@@ -1,45 +1,110 @@
-// Bringing the navbar to life!
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
+
+const getDiseases = () => {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '1c2845669dmsh2435e5986dffce7p1981adjsn4e9ca7dac91e',
+            'X-RapidAPI-Host': 'disease-detection.p.rapidapi.com'
         }
-        if(this.scroll > 500){
+    };
+    
+    fetch('https://disease-detection.p.rapidapi.com/symptom_list/', options)
+        .then(response => response.json())
+        .then(response => getResults(response))
+        .catch(err => console.error(err));
+}
 
-         // introducing functionality to the scroll-up-btn
-            
-            $('.scroll-up-btn').addClass("scroll-up-btn");
-        }else{
-            $('.scroll-up-btn').removeClass("scroll-up-btn");
-        }
-    });
-
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
+const getResults = () => {
+    console.log()
+    const inputValue = document.querySelector("#query").value
+    const outputValue = document.querySelector("#answer")
+    outputValue.addEventListener("submit", function(e) {
+        e.preventDefault()
+        console.log("hay fever")
     })
-});
-
-
-const handleFirstTab = (e) => {
-    if(e.key === 'Tab') {
-      document.body.classList.add('user-is-tabbing')
-  
-      window.removeEventListener('keydown', handleFirstTab)
-      window.addEventListener('mousedown', handleMouseDownOnce)
-    }
-  
-  }
+}
 
 
 
+const init = () => {
+    document.addEventListener("DOMContentLoaded", function() {
+        // getDiseases()
+        getResults()
+    })
+}
 
-// adding an eventListener() to the submit form
+init()
 
-const myForm = document.getElementById("myForm");
-myForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Bringing the navbar to life!
+
+// $(document).ready(function(){
+//     $(window).scroll(function(){
+//         if(this.scrollY > 20){
+//             $('.navbar').addClass("sticky");
+//         }else{
+//             $('.navbar').removeClass("sticky");
+//         }
+//         if(this.scroll > 500){
+
+//          // introducing functionality to the scroll-up-btn
+
+//             $('.scroll-up-btn').addClass("scroll-up-btn");
+//         }else{
+//             $('.scroll-up-btn').removeClass("scroll-up-btn");
+//         }
+//     });
+
+//     $('.scroll-up-btn').click(function(){
+//         $('html').animate({scrollTop: 0});
+//     })
+// });
+
+
+// const donor = document.getElementById("donorBtn")
+// console.log(donor)
+
+// donor.addEventListener("click", function(e) {
+//     e.preventDefault()
+// })
+
+
+
+// // adding an eventListener() to the submit form
+
+// const myForm = document.getElementById("myForm");
+// myForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+// })
+
 

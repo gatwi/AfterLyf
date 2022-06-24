@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>"
+        <script defer src="script.js"></script>
     </head>
     <body>
-        <script src="script.js"></script>
         <div class="scroll-up-btn">
             <i class="fa fa-angle-up"></i>
         </div>
@@ -39,8 +39,8 @@
                             Blood donation is a lifesaving care, essential for patients' survival from surgery, cancer treatments, traumatic injuries and chronic illnesses. The need for blood is constant, with a global yearly turnout of age-eligible people averaging about 3% only.
                         </p>
                         <div class="services-btn-grp">
-                            <button class="services-btn donor">i am a donor</button>
-                            <button class="services-btn recipient">i am a recipient</button>
+                            <button id="donorBtn" class="services-btn donor">i am a donor</button>
+                            <button id="recipientBtn" class="services-btn recipient">i am a recipient</button>
                         </div>
                     </div>
                 </div>
@@ -87,6 +87,15 @@
                 <p class="about-info">AfterLyf is a dedicated multi-dimensional healthcare service organization, focusing on blood and organ donation, grief and bereavement counselling, and assisted living. It is our core belief that humans have a right to a dignified way of living, and can further enhance their purpose post-mortem as organ donors. Our main emphasis is on the freedom of choice. Our greatest belief is in the innate desire and ability to come together as a society and help each other out. Our foundation is on that core value of togetherness, love, care, peace and stability, and AfterLyf is determined to partner with you in this journey and beyond.</p>
             </div>
         </section>
+        <!-- form section -->
+        <div class="form-section active">
+            <h1 class="heading">disease detection</h1>
+            <p class="form-info">Detect diseases using symptoms check</p>
+            <form>
+                <input id="query" type="text" name="symptom" placeholder="What are you feeling?">
+                <input id="answer" type="submit" name="" value="search">
+            </form>
+        </div>
         <!-- extras -->
         <div class="extras-section active">
             <h1 class="heading">afterlyf healthcare solutions</h1>
@@ -116,11 +125,11 @@
                 <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
                 <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
                 <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
-                <button type="submit" class="form-submit-btn">submit</button>
+                <button id="myBtn" type="submit" class="form-submit-btn">submit</button>
             </form>
             <!-- google map -->
             <div class="map">
-                <iframe src="https://www.google.com/maps/place/Pharmaplus+Pharmacy+Capital+Centre/@-1.3164516,36.5711435,11z/data=!4m9!1m2!2m1!1sPharmacies!3m5!1s0x182f112c0cffd701:0x3e50030e13f5e714!8m2!3d-1.3164516!4d36.8348154!15sCgpQaGFybWFjaWVzWgwiCnBoYXJtYWNpZXOSAQhwaGFybWFjeQ" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.32335424496!2d36.84739685!3d-1.3032089500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1656038532615!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
            </div>
         </section>

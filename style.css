@@ -14,7 +14,7 @@ body{
     display: block;
     margin: auto;
     min-height: 100vh;
-    background: #191919;
+    background: skyblue;
     font-family: sans-serif;
 }
 
@@ -32,7 +32,7 @@ body{
 
 .navbar.sticky{
     padding: 10px 0;
-    background: #ff4f4f;
+    background: violet;
 }
 
 .links{
@@ -42,7 +42,7 @@ body{
 
 .link a{
     color: #fff;
-    opacity: 0.8;
+    opacity: 5;
     text-decoration: none;
     text-transform: capitalize;
     padding: 10px 30px;
@@ -72,7 +72,7 @@ body{
     border-radius: 6px;
     cursor: pointer;
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: all;
 }
 
 
@@ -90,7 +90,7 @@ body{
 }
 
 .hero-heading{
-    color: #fff;
+    color: #252525;
     font-size: 120px;
     text-transform: capitalize;
     font-weight: 300;
@@ -214,8 +214,8 @@ body{
 /* about-section */
 .about-section{
     width: 100%;
-    min-height: 100vh;
-    padding: 150px 100px 0;
+    min-height: 80vh;
+    padding: 100px 50px 0;
     position: relative;
     top: 0;
     opacity: 0;
@@ -246,8 +246,8 @@ body{
 }
 
 .about-info{
-    color: #fff;
-    opacity: 0.6;
+    color: #1a1a1a;
+    opacity: 1;
     font-size: 20px;
     line-height: 40px;
 }
@@ -257,6 +257,55 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+/* form section */
+.form-section{
+    position: relative;
+    width: 50%;
+    top: 0;
+    margin: auto;
+    display: grid;
+    grid-gap: -50px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 50px;
+    color: #1a1a1a;
+    text-transform: capitalize;
+    margin-top: 50px;
+}
+
+.form-info{
+    color: #1a1a1a;
+    opacity: 1;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+input[type="text"]{
+    background: rgba(19, 17, 17, 0.2);
+    width: 400px;
+    height: 50px;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"]{
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
 }
 
 /* extras section */
@@ -295,7 +344,7 @@ body{
 
 .extras-name{
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 600px;
     text-align: center;
     text-transform: capitalize;
     margin: 30px 0 20px;
@@ -303,7 +352,7 @@ body{
 
 .extras-info{
     text-align: center;
-    opacity: 0.5;
+    opacity: 2;
     font-size: 18px;
     line-height: 30px;
 }
@@ -327,7 +376,7 @@ body{
     font-size: 60px;
     color: #fff;
     text-transform: capitalize;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 100px;
 }
 
@@ -344,7 +393,7 @@ body{
 .contact-form input, .contact-form textarea{
     width: 100%;
     height: 40px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(19, 17, 17, 0.2);
     border: 1px solid #fff;
     margin-bottom: 30px;
     border-radius: 5px;
