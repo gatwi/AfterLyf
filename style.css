@@ -63,7 +63,7 @@ body{
     width: 42px;
     background: #ff4f4f;
     right: 30px;
-    bottom: 10px;
+    bottom: 30px;
     text-align: center;
     line-height: 45px;
     color: #fff;
@@ -71,10 +71,10 @@ body{
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
-    opacity: 2;
+    opacity: 1;
     pointer-events: auto;
-    transition: all 0.3s ease;
 }
+
 
 /* home section styling */
 .home-section {
